@@ -11,6 +11,8 @@ function isPyPyVersion(versionSpec: string) {
 async function run() {
   try {
     let version = core.getInput('python-version');
+    core.info("version key type: " + typeof(version));
+    core.info("version key value: " + "'" + version + "'");
     if (version) {
       const arch: string = core.getInput('architecture') || os.arch();
       if (isPyPyVersion(version)) {
