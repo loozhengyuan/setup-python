@@ -17,19 +17,6 @@ jobs:
     - name: Setup Python
       uses: ./
 
-  test-version-falsey:
-    name: Test Version Falsey
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Setup Python
-      uses: ./
-      with:
-        python-version: false
-
   test-version-empty:
     name: Test Version Empty
     runs-on: ubuntu-latest

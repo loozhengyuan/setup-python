@@ -2652,9 +2652,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             let version = core.getInput('python-version');
-            core.info("version key type: " + typeof (version));
-            core.info("version key value: " + "'" + version + "'");
-            if (version) {
+            if (version !== undefined && version !== null) {
                 const arch = core.getInput('architecture') || os.arch();
                 if (isPyPyVersion(version)) {
                     const installed = yield finderPyPy.findPyPyVersion(version, arch);
